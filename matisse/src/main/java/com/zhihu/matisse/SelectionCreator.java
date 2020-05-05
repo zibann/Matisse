@@ -370,10 +370,5 @@ public final class SelectionCreator {
         }
     }
 
-    public SelectionCreator showPreview(boolean showPreview) {
-        mSelectionSpec.showPreview = showPreview;
-        return this;
-    }
-
 
 }
