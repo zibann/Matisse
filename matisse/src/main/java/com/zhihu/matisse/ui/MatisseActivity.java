@@ -139,6 +139,11 @@ public class MatisseActivity extends AppCompatActivity implements
         if (savedInstanceState != null) {
             mOriginalEnable = savedInstanceState.getBoolean(CHECK_STATE);
         }
+        ArrayList<Item> selectionItems = getIntent().getParcelableArrayListExtra(SelectedItemCollection.STATE_SELECTION);
+        if (selectionItems != null) {
+            mSelectedCollection.setDefaultSelection(selectionItems);
+        }
+
         updateBottomToolbar();
 
         mAlbumsAdapter = new AlbumsAdapter(this, null, false);
